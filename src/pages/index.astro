@@ -1,8 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Contacts from "../components/sections/Contacts.astro";
+import Design from "../components/sections/Design.astro";
+import HeadlineText from "../components/sections/Headline.astro";
+import Introduction from "../components/sections/Introduction.astro";
+import Journey from "../components/sections/Journey.astro";
+import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	
+	<HeadlineText />
+	<Introduction />
+	<Journey />
+	<Projects />
+	<Skills />
+	<Design />
+	<Contacts />
 </Layout>
+
+<style scoped>
+	@keyframes rotate {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	body {
+		background-size: 200% 200%;
+		animation: rotate 10s linear infinite;
+	}
+</style>
