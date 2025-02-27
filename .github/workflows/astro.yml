@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [main]        # Also run on pull requests to main.
 
+permissions:
+  contents: write  # Allows pushing to the repository
+  pages: write     # Allows managing GitHub Pages
+  id-token: write  # Allows authentication with GitHub OIDC (optional)
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
