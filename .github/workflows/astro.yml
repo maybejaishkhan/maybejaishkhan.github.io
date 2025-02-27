@@ -6,12 +6,6 @@ on:
   pull_request:
     branches: [main]        # Also run on pull requests to main.
 
-permissions:
-  contents: write  # Allows pushing to the repository
-  pages: write     # Allows managing GitHub Pages
-  id-token: write  # Allows authentication with GitHub OIDC (optional)
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,15 +25,3 @@ jobs:
 
       - name: Build the site
         run: npm run build
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
