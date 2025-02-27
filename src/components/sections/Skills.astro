@@ -1,0 +1,47 @@
+---
+import BlackSection from "../BlackSection.astro";
+---
+
+<BlackSection id="skills">
+    <div class="terminal">
+        <p class="prompt code-font">ls</p> 
+        <p class="ls-result code-font">skills.txt</p>
+        <br>
+        <p class="prompt code-font">cat skills.txt</p> 
+        <p class="cat-result code-font">----------------- <br> </p>
+        <ul class="code-font">
+            <li>Web Development</li>
+
+        </ul>
+    </div>
+</BlackSection>
+
+<style scoped>
+    .prompt {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .prompt::before {
+        content: "user@jaishkhan:~$ ";
+        color: #00FF00;
+    }
+
+    .input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        flex-grow: 1
+    }
+
+    .ls-result {
+        color: #7991e3;
+    }
+
+    .cat-result {
+
+    }
+</style>
