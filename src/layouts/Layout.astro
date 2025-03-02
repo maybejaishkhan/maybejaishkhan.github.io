@@ -1,5 +1,4 @@
 ---
-import ClientRouter from "astro/components/ClientRouter.astro";
 import "../styles/global.css";
 import NavBar from "../components/NavBar.astro";
 ---
@@ -8,7 +7,7 @@ import NavBar from "../components/NavBar.astro";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Jaish Khan</title>
@@ -16,10 +15,8 @@ import NavBar from "../components/NavBar.astro";
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lora&family=Manrope:wght@500&display=swap" rel="stylesheet">
 		<!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> -->
-
-		<ClientRouter />
 	</head>
 	<body class="scroll-smooth w-full flex flex-col items-center justify-center">
 		<NavBar />

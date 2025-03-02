@@ -3,20 +3,95 @@ import BlackSection from "../BlackSection.astro";
 ---
 
 <BlackSection id="skills">
-    <div class="terminal">
-        <p class="prompt code-font">ls</p> 
-        <p class="ls-result code-font">skills.txt</p>
-        <br>
-        <p class="prompt code-font">cat skills.txt</p> 
-        <p class="cat-result code-font">----------------- <br> </p>
-        <ul class="code-font">
-            <li>Web Development</li>
-
-        </ul>
+    <div class="window w-full p-8">
+        <div class="title-bar flex justify-between bg-neutral-800 rounded-t-lg">
+            <p class="title code-font font-bold flex justify-center items-center p-4">My Skills</p>
+            <div class="buttons flex p-2">
+                <div class="flex justify-center items-center py-2 px-4 minimize rounded-full">--</div>
+                <div class="flex justify-center items-center py-2 px-4 zoom rounded-full">O</div>
+                <div class="flex justify-center items-center py-2 px-4 close bg-red-400 rounded-full">×</div>
+            </div>
+        </div>
+        <div class="terminal p-2 border border-neutral-800 grid md:grid-cols-2">
+            <div class="first-column">
+                <div class="command-1">
+                    <p class="prompt code-font">ls</p> 
+                    <p class="ls-result code-font">webdev.txt&nbsp;&nbsp;&nbsp;&nbsp;androiddev.txt&nbsp;&nbsp;&nbsp;&nbsp;devops.txt</p>
+                </div>
+                <br>
+                <div class="command-2">
+                    <p class="prompt code-font">cat webdev.txt</p> 
+                    <p class="cat-result code-font">----------------- <br> </p>
+                    <h3 class="code-font text-2xl">Web Development</h3>
+                    <ul class="code-font">
+                        <li>HTML, CSS, JavaScript, TypeScript</li>
+                        <li>React, Tailwind, Nodejs, Express, MongoDB</li>
+                        <li>Next, Astro, MySQL, Postgres, Redis</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="command-3">
+                    <p class="prompt code-font">cat androiddev.txt</p> 
+                    <p class="cat-result code-font">----------------- <br> </p>
+                    <h3 class="code-font text-2xl">Android Development</h3>
+                    <ul class="code-font">
+                        <li>Kotlin, Jetpack Compose, KTor</li>
+                        <li>Java, XML, Gradle, SQLite, Room</li>
+                        <li>Kotlin Multiplatform, Dart, Flutter</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="command-4">
+                    <p class="prompt code-font">cat webdev.txt</p> 
+                    <p class="cat-result code-font">----------------- <br> </p>
+                    <h3 class="code-font text-2xl">Dev Ops</h3>
+                    <ul class="code-font">
+                        <li>Git, GitHub Actions, GitLab CI</li>
+                        <li>Docker, Kubernetes, Ansible</li>
+                        <li>OpenTelemetry, Grafana, Prometheus</li>
+                        <li>AWS, Cloudflare, Terraform</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="second-column hidden lg:block">
+                <p class="prompt code-font">neofetch</p>
+                <br>
+                <br>
+                <pre class="code-font">
+           .hddddddddddddddddddddddh.
+          :dddddddddddddddddddddddddd:
+         /dddddddddddddddddddddddddddd/ 
+        +dddddddddddddddddddddddddddddd+
+      `sdddddddddddddddddddddddddddddddds`
+     `ydddddddddddd++hdddddddddddddddddddy`
+    .hddddddddddd+`  `+ddddh:-sdddddddddddh.
+    hdddddddddd+`      `+y:    .sddddddddddh
+    ddddddddh+`   `//`   `.`     -sddddddddd 
+    ddddddh+`   `/hddh/`   `:s-    -sddddddd
+    ddddh+`   `/+/dddddh/`   `+s-    -sddddd
+    ddd+`   `/o` :dddddddh/`   `oy-    .yddd
+    hdddyo+ohddyosdddddddddho+oydddy++ohdddh
+    .hddddddddddddddddddddddddddddddddddddh.
+     `yddddddddddddddddddddddddddddddddddy`
+      `sdddddddddddddddddddddddddddddddds`
+        +dddddddddddddddddddddddddddddd+
+         /dddddddddddddddddddddddddddd/
+          :dddddddddddddddddddddddddd:
+           .hddddddddddddddddddddddh.
+                </pre>
+            </div>
+        </div>
     </div>
 </BlackSection>
 
 <style scoped>
+    .window {
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+
     .prompt {
         display: flex;
         align-items: center;
