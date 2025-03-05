@@ -1,7 +1,44 @@
 ---
+import ProjectCard from "../ProjectCard.astro";
 import WhiteSection from "../WhiteSection.astro";
+
 ---
 
 <WhiteSection id="projects">
-
+    <div class="flex flex-col justify-center items-center">
+        <p class="text-3xl md:text-4xl p-8 serif-font text-balance text-center">🚀 My Projects</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+            <ProjectCard
+                id="1"
+                title="Project 1"
+                description="Description of project 1."
+                detailedDescription="Detailed description of project 1..."
+                projectLink="#"
+            />
+            <ProjectCard
+                id="2"
+                title="Project 2"
+                description="Description of project 2."
+                detailedDescription="Detailed description of project 2..."
+                projectLink="#"
+            />
+        </div>
+    </div>
 </WhiteSection>
+
+<style>
+    .modal::backdrop {
+        animation: fade-in 0.3s ease;
+    }
+    .modal[open] {
+        animation: slide-in 0.3s ease;
+    }
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slide-in {
+        from { transform: translateY(-10%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>

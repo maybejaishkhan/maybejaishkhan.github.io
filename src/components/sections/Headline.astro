@@ -3,9 +3,14 @@ import WhiteSection from "../WhiteSection.astro";
 ---
 
 <WhiteSection id="headline">
-    <div id="container" class="flex flex-col justify-center items-center gap-8">
-        <h1 class="text-6xl sm:text-8xl font-black text-center">JAISH KHAN</h1>
-        <h3 class="text-3xl code-font">Dev-Ops-Engineer</h3>
+    <div id="container" class="flex flex-col justify-center items-center relative">
+        <h1 class="font-black">JAISH KHAN</h1>
     </div>
 </WhiteSection>
+
+<style scoped>
+    h1 {
+        font-size: clamp(3rem, -2.1429rem + 20.5714vw, 12rem);
+    }
+</style>
 

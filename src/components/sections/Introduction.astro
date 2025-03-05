@@ -1,21 +1,74 @@
 ---
 import BlackSection from "../BlackSection.astro";
-
-
 ---
 
 <BlackSection id="intro">
     <div class="flex flex-col gap-8 justify-items-center items-center">
-        <p class="text-3xl p-8 serif-font">I'm a University student who has primarily worked on <span class="code-font text-2xl p-2">#WebDevelopment</span> and <span class="code-font text-2xl p-2">#AndroidDevelopment</span> <br> and is now pursuing <span class="code-font text-2xl p-2">#DevOps</span> .</p>
+        <p class="text-3xl md:text-4xl p-8 serif-font text-balance text-center">✨ A University student with an insane itch for learning <span class="">new</span> things.</p>
+    </div>
+    <div class="window w-full p-8">
+        <div class="title-bar flex justify-between bg-neutral-800 rounded-t-lg">
+            <p class="title code-font font-bold flex justify-center items-center p-4">My Skills</p>
+            <div class="buttons flex p-4 gap-4">
+                <div class="flex justify-center items-center minimize rounded-full">&mdash;</div>
+                <div class="flex justify-center items-center zoom rounded-full">&#x25a2;</div>
+                <div class="flex justify-center items-center close">&#x2715;</div>
+            </div>
+        </div>
+        <div class="terminal p-2 border border-neutral-800 grid md:grid-cols-2">
+            <div class="first-column">
+                <div class="command-1">
+                    <p class="prompt code-font">ls</p> 
+                    <p class="ls-result code-font">skills.txt</p>
+                </div>
+                <br>
+                <div class="command-2">
+                    <p class="prompt code-font">cat skills.txt</p> 
+                    <p class="cat-result code-font">----------------- <br> </p>
+                    <ol class="code-font">
+                        <li>1. Web Development (Frontend + Backend)</li>
+                        <li>2. Android Development (Compose UI and Flutter)</li>
+                        <li>3. DevOps Engineering (Cloud + Platform + Network + System)</li>
+                    </ul>
+                </div>                
+            </div>
+        </div>
     </div>
 </BlackSection>
 
 <style scoped>
-    span.code-font {
-        color: cyan;
+    .window {
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
     }
 
-    p {
-        line-height: 1.5;
+    .prompt {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .prompt::before {
+        content: "user@jaishkhan:~$ ";
+        color: #00FF00;
+    }
+
+    .input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        flex-grow: 1
+    }
+
+    .ls-result {
+        color: #7991e3;
+    }
+
+    .cat-result {
+
     }
 </style>
